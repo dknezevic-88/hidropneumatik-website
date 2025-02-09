@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hidropneumatik</title>
+    <title>O Nama - Hidropneumatik</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,7 +14,7 @@
 
         /* Gornji deo headera (radno vreme, telefon, email) */
         .top-header {
-            background-color: #87CEEB; /* Svetlo plava boja */
+            background-color: #87CEEB; /* Svjetlo plava boja */
             color: white; /* Beli tekst */
             padding: 5px 20px;
             display: flex;
@@ -23,20 +23,10 @@
             font-size: 14px;
         }
 
-        .top-header .left-side {
-            display: flex;
-            gap: 20px;
-        }
-
-        .top-header .right-side {
-            display: flex;
-            gap: 20px;
-        }
-
-        /* Glavni header (ostavljen u bijeloj boji) */
+        /* Glavni header */
         header {
-            background-color: white; /* Bijela pozadina */
-            color: #87CEEB; /* Svetlo plava boja za tekst */
+            background-color: white;
+            color: #007ac1;
             padding: 10px 20px;
             display: flex;
             align-items: center;
@@ -67,6 +57,7 @@
             margin: 0;
             font-size: 40px;
             font-weight: bold;
+            color: #87CEEB;
         }
 
         header .right-side {
@@ -76,7 +67,7 @@
 
         /* Meni */
         nav {
-            background-color: #87CEEB; /* Svetlo plava boja menija */
+            background-color: #87CEEB; /* Svjetlo plava boja menija */
             padding: 5px 0;
             text-align: center;
         }
@@ -89,16 +80,11 @@
             font-size: 16px;
         }
 
-        /* Promena boje za aktivnu stavku */
-        nav a.active {
-            background-color: #005f8d; /* Tamnija plava boja za aktivnu stavku */
-        }
-
         nav a:hover {
             background-color: #007ac1; /* Plavi hover efekat */
         }
 
-        /* Hero sekcija */
+        /* Hero sekcija (slika Priprema zraka) */
         .hero {
             text-align: center;
             padding: 50px 20px;
@@ -107,6 +93,7 @@
             background-position: center;
             color: white;
             position: relative;
+            height: 400px; /* Povećajte visinu ako želite da slika bude veća */
         }
 
         .hero-overlay {
@@ -121,84 +108,47 @@
         .hero-content {
             position: relative;
             z-index: 2;
-        }
-
-        /* Promjena boje teksta na svetlo plavu */
-        .hero h1, .hero p {
-            color: #87CEEB; /* Svetlo plava boja */
+            top: 50%;
+            transform: translateY(-50%);
         }
 
         .hero h1 {
             font-size: 48px;
             margin: 0;
+            color: #87CEEB; /* Svjetlo plava boja */
         }
 
         .hero p {
             font-size: 18px;
             margin: 10px 0 0;
-            color: #87CEEB; /* Svetlo plava boja */
+            color: #87CEEB; /* Svjetlo plava boja */
         }
 
-        /* Video sekcija bez razmaka između slike i videa */
-        .video-section {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .video-section video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Partneri (logotipi) između slike i videa */
-        #partners {
+        /* O Nama sekcija */
+        #about {
             padding: 50px 20px;
             background-color: #ffffff;
-            text-align: center;
+            text-align: left; /* Poravnavanje na lijevo */
+            color: #333; /* Tamno siva boja teksta */
         }
 
-        #partners h2 {
+        #about h2 {
+            font-size: 36px;
+            color: #87CEEB; /* Svjetlo plava boja */
             margin-bottom: 20px;
         }
 
-        .carousel-wrapper {
-            display: flex;
-            animation: scroll 50s linear infinite;
-        }
-
-        .carousel-wrapper img {
-            height: 60px;
-            margin: 0 20px;
-        }
-
-        @keyframes scroll {
-            from {
-                transform: translateX(0);
-            }
-            to {
-                transform: translateX(-100%);
-            }
-        }
-
-        .carousel {
-            display: flex;
-            width: calc(200%);
-        }
-
-        /* Kontakt sekcija */
-        #contact {
-            padding: 50px 20px;
-            background-color: #f4f4f4;
-            text-align: center;
+        #about p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333; /* Tamno siva boja teksta */
+            margin-top: 20px;
         }
 
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #87CEEB; /* Svetlo plava boja */
+            background-color: #87CEEB; /* Svjetlo plava boja footer-a */
             color: white;
         }
     </style>
@@ -214,7 +164,7 @@
         </div>
     </div>
 
-    <!-- Glavni header (ostavljen u bijeloj boji) -->
+    <!-- Glavni header -->
     <header>
         <div class="left-side" style="display: flex; align-items: center;">
             <img src="logo-210x191.png" alt="Hidropneumatik Logo">
@@ -229,15 +179,15 @@
 
     <!-- Meni -->
     <nav>
-        <a href="#" class="active">Početna</a>
-        <a href="#">O Nama</a>
+        <a href="index.html">Početna</a>
+        <a href="o-nama.html">O Nama</a>
         <a href="#">Projektovanje i Inženjering</a>
         <a href="#">Servis u Hidraulici, Pneumatici i Elektronici</a>
         <a href="#">Trgovina</a>
         <a href="#">Kontakt</a>
     </nav>
 
-    <!-- Hero sekcija (slika Priprema zraka) -->
+    <!-- Hero sekcija sa slikom i natpisom (Priprema zraka) -->
     <div class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -246,45 +196,18 @@
         </div>
     </div>
 
-    <!-- Partneri (logotipi) između slike i videa -->
-    <section id="partners">
-        <h2>Posjedujemo komponente sledećih renomiranih proizvođača</h2>
-        <div class="carousel">
-            <div class="carousel-wrapper">
-                <img src="festo-logo.png" alt="Festo">
-                <img src="festopartner-logo.png" alt="Festo Partner">
-                <img src="smc-logo.png" alt="SMC">
-                <img src="pneumax-logo.png" alt="Pneumax">
-                <img src="metalwork-logo.png" alt="MetalWork">
-                <img src="rih-logo.png" alt="RIH">
-                <img src="rexroth-logo.png" alt="Rexroth">
-                <img src="eaton-logo.png" alt="Eaton">
-                <img src="siemens-logo.png" alt="Siemens">
-                <img src="adventics-logo.png" alt="Adventics">
-                <img src="danfoss-logo.png" alt="Danfoss">
-                <img src="wika-logo.png" alt="Wika">
-                <img src="loctite-logo.png" alt="Loctite">
-                <img src="parker-logo.png" alt="Parker">
-                <img src="norgen-logo.png" alt="Norgen">
-                <img src="ppt-logo.png" alt="PPT">
-            </div>
-        </div>
-    </section>
+    <!-- O Nama sekcija -->
+    <section id="about">
+        <h2>O Nama</h2>
+        <p>
+            “Hidropneumatik” d.o.o. je privatno preduzeće za projektovanje, proizvodnju, usluge, remont i trgovinu u hidraulici i pneumatici.<br><br>
 
-    <!-- Video sekcija ispod slike Priprema zraka -->
-    <div class="video-section">
-        <video id="videoPlayer" autoplay muted loop>
-            <source src="v1(1).mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+            Preduzeće je osnovano 1997. godine sa sjedištem u Banjoj Luci, Bosna i Hercegovina.<br><br>
 
-    <!-- Kontakt -->
-    <section id="contact">
-        <h2>Kontakt</h2>
-        <p><strong>Adresa:</strong> Aleja Svetog Save 35, Banja Luka, BiH</p>
-        <p><strong>Telefon:</strong> +387 (0)51/316-140</p>
-        <p><strong>Email:</strong> office@hidropneumatik.com</p>
+            Osnovna djelatnost je projektovanje, konstruisanje, inžinjering i servisiranje hidrauličnih i pneumatskih uređaja. Takođe nudimo nova idejna rješenja instalacija sa izvođenjem i montažom.<br><br>
+
+            Naš tim čine stručnjaci sa dugogodišnjim iskustvom i najnovijom tehnologijom koja omogućava da svaki projekt realizujemo u najkraćem mogućem roku sa najvišim standardima kvaliteta.
+        </p>
     </section>
 
     <!-- Footer -->

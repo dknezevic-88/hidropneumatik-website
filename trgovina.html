@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hidropneumatik</title>
+    <title>Hidropneumatik - Trgovina</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,13 +12,13 @@
             background-color: #f4f4f4;
         }
 
-        /* Gornji deo headera (radno vreme, telefon, email) */
+        /* Gornji deo headera */
         .top-header {
-            background-color: #87CEEB; /* Svetlo plava boja */
-            color: white; /* Beli tekst */
+            background-color: #87CEEB;
+            color: white;
             padding: 5px 20px;
             display: flex;
-            justify-content: flex-end; /* Poravnanje desno */
+            justify-content: flex-end;
             align-items: center;
             font-size: 14px;
         }
@@ -33,10 +33,10 @@
             gap: 20px;
         }
 
-        /* Glavni header (ostavljen u bijeloj boji) */
+        /* Glavni header */
         header {
-            background-color: white; /* Bijela pozadina */
-            color: #87CEEB; /* Svetlo plava boja za tekst */
+            background-color: white;
+            color: #87CEEB;
             padding: 10px 20px;
             display: flex;
             align-items: center;
@@ -69,14 +69,9 @@
             font-weight: bold;
         }
 
-        header .right-side {
-            display: flex;
-            align-items: center;
-        }
-
         /* Meni */
         nav {
-            background-color: #87CEEB; /* Svetlo plava boja menija */
+            background-color: #87CEEB;
             padding: 5px 0;
             text-align: center;
         }
@@ -89,13 +84,12 @@
             font-size: 16px;
         }
 
-        /* Promena boje za aktivnu stavku */
         nav a.active {
-            background-color: #005f8d; /* Tamnija plava boja za aktivnu stavku */
+            background-color: #005f8d;
         }
 
         nav a:hover {
-            background-color: #007ac1; /* Plavi hover efekat */
+            background-color: #007ac1;
         }
 
         /* Hero sekcija */
@@ -123,9 +117,8 @@
             z-index: 2;
         }
 
-        /* Promjena boje teksta na svetlo plavu */
         .hero h1, .hero p {
-            color: #87CEEB; /* Svetlo plava boja */
+            color: #87CEEB;
         }
 
         .hero h1 {
@@ -136,37 +129,28 @@
         .hero p {
             font-size: 18px;
             margin: 10px 0 0;
-            color: #87CEEB; /* Svetlo plava boja */
+            color: #87CEEB;
         }
 
-        /* Video sekcija bez razmaka između slike i videa */
-        .video-section {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .video-section video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Partneri (logotipi) između slike i videa */
+        /* Partneri (logotipi sa animacijom) */
         #partners {
             padding: 50px 20px;
             background-color: #ffffff;
             text-align: center;
+            overflow: hidden;
         }
 
         #partners h2 {
             margin-bottom: 20px;
+            text-align: left; /* Poravnaj levo */
+            color: #005f8d; /* Isto kao u .festo-text */
+            font-weight: bold;
+            font-size: 18px; /* Isto kao u .festo-text */
         }
 
         .carousel-wrapper {
             display: flex;
-            animation: scroll 50s linear infinite;
+            animation: scroll 30s linear infinite;
         }
 
         .carousel-wrapper img {
@@ -175,37 +159,57 @@
         }
 
         @keyframes scroll {
-            from {
+            0% {
                 transform: translateX(0);
             }
-            to {
-                transform: translateX(-100%);
+            100% {
+                transform: translateX(-50%);
             }
         }
 
         .carousel {
             display: flex;
-            width: calc(200%);
+            width: 100%;
         }
 
-        /* Kontakt sekcija */
-        #contact {
-            padding: 50px 20px;
-            background-color: #f4f4f4;
+        /* Novi stil za tekst ispod animacije */
+        .festo-text {
+            padding: 20px;
+            font-size: 18px;
+            color: #005f8d;
+            font-weight: bold;
             text-align: center;
+            margin-top: 20px;
         }
 
+        /* Stil za sliku certifikata */
+        .certificate-img {
+            display: block;
+            margin: 20px auto;
+            max-width: 30%; /* Smanjena širina slike na 30% */
+            height: auto;
+        }
+
+        /* Sekcija za partnerstvo (pozadina bela i centrirano) */
+        .certificate-section {
+            background-color: white;
+            text-align: center;
+            padding: 0 20px; /* Manje paddinga */
+            margin-top: -20px; /* Premesti gore */
+        }
+
+        /* Footer */
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #87CEEB; /* Svetlo plava boja */
+            background-color: #87CEEB;
             color: white;
         }
     </style>
 </head>
 <body>
 
-    <!-- Gornji deo headera (radno vreme, telefon, email) -->
+    <!-- Gornji deo headera -->
     <div class="top-header">
         <div class="right-side">
             <span>Radno vreme: Pon-Pet: 8:00-16:00</span>
@@ -214,7 +218,7 @@
         </div>
     </div>
 
-    <!-- Glavni header (ostavljen u bijeloj boji) -->
+    <!-- Glavni header -->
     <header>
         <div class="left-side" style="display: flex; align-items: center;">
             <img src="logo-210x191.png" alt="Hidropneumatik Logo">
@@ -229,15 +233,15 @@
 
     <!-- Meni -->
     <nav>
-        <a href="#" class="active">Početna</a>
+        <a href="#">Početna</a>
         <a href="#">O Nama</a>
         <a href="#">Projektovanje i Inženjering</a>
         <a href="#">Servis u Hidraulici, Pneumatici i Elektronici</a>
-        <a href="#">Trgovina</a>
+        <a href="#" class="active">Trgovina</a>
         <a href="#">Kontakt</a>
     </nav>
 
-    <!-- Hero sekcija (slika Priprema zraka) -->
+    <!-- Hero sekcija -->
     <div class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -246,9 +250,20 @@
         </div>
     </div>
 
-    <!-- Partneri (logotipi) između slike i videa -->
+    <!-- Sekcija za Festo partnerstvo i certifikat -->
+    <section class="certificate-section">
+        <div class="festo-text">
+            <p>Ovlašteni smo partneri kompanije "FESTO" za područje Bosne i Hercegovine.</p>
+        </div>
+        <!-- Slika certifikata -->
+        <div class="certificate-img">
+            <img src="certifikat.png" alt="Festo Partner Certificate">
+        </div>
+    </section>
+
+    <!-- Partneri (logotipi sa animacijom) -->
     <section id="partners">
-        <h2>Posjedujemo komponente sledećih renomiranih proizvođača</h2>
+        <h2>Posjedujemo i nabavljamo orginalne rezervne dijelove i komponente najpoznatijih domaćih i svjetskih proizvođača u oblasti hidraulike i pneumatike za područije BiH : Festo, Prva Petoletka, Wabco, Eaton-Vickers, Bosch Rexroth, Metal Work, Pneumax i drugih po zahtjevu:</h2>
         <div class="carousel">
             <div class="carousel-wrapper">
                 <img src="festo-logo.png" alt="Festo">
@@ -269,22 +284,6 @@
                 <img src="ppt-logo.png" alt="PPT">
             </div>
         </div>
-    </section>
-
-    <!-- Video sekcija ispod slike Priprema zraka -->
-    <div class="video-section">
-        <video id="videoPlayer" autoplay muted loop>
-            <source src="v1(1).mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-
-    <!-- Kontakt -->
-    <section id="contact">
-        <h2>Kontakt</h2>
-        <p><strong>Adresa:</strong> Aleja Svetog Save 35, Banja Luka, BiH</p>
-        <p><strong>Telefon:</strong> +387 (0)51/316-140</p>
-        <p><strong>Email:</strong> office@hidropneumatik.com</p>
     </section>
 
     <!-- Footer -->

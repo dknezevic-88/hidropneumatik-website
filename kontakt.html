@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidropneumatik - Kontakt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Gornji deo headera (radno vrijeme, telefon, email) */
+        .top-header {
+            background-color: #87CEEB; /* Svetlo plava boja */
+            color: white; /* Beli tekst */
+            padding: 5px 20px;
+            display: flex;
+            justify-content: flex-end; /* Poravnanje desno */
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .top-header .left-side {
+            display: flex;
+            gap: 20px;
+        }
+
+        .top-header .right-side {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Glavni header */
+        header {
+            background-color: white; /* Bijela pozadina */
+            color: #87CEEB; /* Svetlo plava boja za tekst */
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        header img {
+            height: 60px;
+            margin-right: 10px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease, filter 0.3s ease;
+            filter: brightness(1);
+        }
+
+        header img:hover {
+            opacity: 1;
+            filter: brightness(1);
+        }
+
+        header .title {
+            line-height: 1.2;
+            display: flex;
+            align-items: center;
+        }
+
+        header .title h1 {
+            margin: 0;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        header .right-side {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Meni */
+        nav {
+            background-color: #87CEEB; /* Svetlo plava boja menija */
+            padding: 5px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        nav a.active {
+            background-color: #005f8d; /* Tamnija plava boja za aktivnu stavku */
+        }
+
+        nav a:hover {
+            background-color: #007ac1; /* Plavi hover efekat */
+        }
+
+        /* Kontakt forma */
+        .contact-form {
+            padding: 50px 20px;
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            text-align: center;
+            color: #005f8d;
+        }
+
+        .contact-form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .contact-form input, .contact-form select, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            background-color: #005f8d;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #007ac1;
+        }
+
+        /* Informacije ispod kontakt forme */
+        .contact-info {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: white;
+            margin-top: 20px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .contact-info strong {
+            color: #005f8d;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #87CEEB; /* Svetlo plava boja */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Gornji deo headera -->
+    <div class="top-header">
+        <div class="right-side">
+            <span>Radno vrijeme: Pon-Pet: 8:00-16:00</span>
+            <span>Telefon: +387(0)51/316-140</span>
+            <span>Email: office@hidropneumatik.com</span>
+        </div>
+    </div>
+
+    <!-- Glavni header -->
+    <header>
+        <div class="left-side" style="display: flex; align-items: center;">
+            <img src="logo-210x191.png" alt="Hidropneumatik Logo">
+            <div class="title">
+                <h1>Hidropneumatik d.o.o.</h1>
+            </div>
+        </div>
+        <div class="right-side">
+            <img src="festopartner-logo.png" alt="Festo Partner">
+        </div>
+    </header>
+
+    <!-- Meni -->
+    <nav>
+        <a href="pocetna.html">Početna</a>
+        <a href="#">O Nama</a>
+        <a href="#">Projektovanje i Inženjering</a>
+        <a href="#">Servis u Hidraulici, Pneumatici i Elektronici</a>
+        <a href="#">Trgovina</a>
+        <a href="#" class="active">Kontakt</a>
+    </nav>
+
+    <!-- Kontakt forma -->
+    <div class="contact-form">
+        <h2>Pošaljite nam poruku</h2>
+        <form>
+            <label for="name">Ime</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="company">Firma</label>
+            <input type="text" id="company" name="company" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Poruka</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Pošaljite</button>
+        </form>
+    </div>
+
+    <!-- Informacije ispod kontakt forme -->
+    <div class="contact-info">
+        <p><strong>Adresa:</strong> Aleja Svetog Save 35, Banja Luka, BiH</p>
+        <p><strong>Telefon:</strong> +387 (0)51/316-140</p>
+        <p><strong>Email:</strong> office@hidropneumatik.com</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Hidropneumatik. Sva prava zadržana.</p>
+    </footer>
+
+</body>
+</html>
